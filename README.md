@@ -63,7 +63,7 @@ Which internally dispatches `make -C src/{package} tests` calls to each package 
 
 You should also consider using
 ```bash
-make ci -jN # where N is the number of max concurrent jobs, or just -j for infinite jobs
+make ci -jN  # where N is the number of parallel jobs (e.g., make ci -j4) # where N is the number of max concurrent jobs, or just -j for infinite jobs
 ```
 To run each of the packages' tests in parallel. This should be generally faster than running in 1 job, but has the downside of messing up the CLI output, so parsing error messages might not be easy.
 
